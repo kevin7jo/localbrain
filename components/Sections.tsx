@@ -47,7 +47,7 @@ const FEATURES = [
   },
   {
     title: "온프레미스 보안",
-    body: "당신의 Mac Studio 안에서만 작동하는 철저한 데이터 보안.",
+    body: "당신의 LocalBrain 안에서만 작동하는 철저한 데이터 보안.",
     icon: Lock,
   },
   {
