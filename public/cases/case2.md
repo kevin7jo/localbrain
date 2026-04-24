@@ -1,6 +1,6 @@
 # Case 2: [품질테스트2]
 ## Request
-SAP S/4HANA 환경에서 FI 전표(BKPF, BSEG) 데이터를 조건에 맞춰 읽어온 뒤, BAPI_ACC_DOCUMENT_POST를 호출하여 일괄 역분개(Reversal) 처리하는 ABAP OO(객체지향) 클래스를 작성해 줘. 대용량 처리를 고려하여 New Open SQL을 사용하고, 로직의 무결성을 검증할 수 있는 ABAP Unit Test 클래스를 포함해 줘.
+Spring Boot와 Spring Data JPA를 사용하여 이커머스 주문 시 '재고 차감'을 처리하는 서비스 로직을 구현해 줘. 단, 블랙프라이데이 이벤트처럼 초당 1만 건의 동시 요청이 발생하는 상황을 가정하여, 데드락(Deadlock)과 동시성 이슈를 완벽하게 제어할 수 있도록 Redis 기반의 분산 락(Redisson) 아키텍처를 적용해 줘. 당연히 JUnit5 기반의 테스트 케이스가 포함되어야 해.
 
 ## Response
 [Image of Redisson Distributed Lock & JPA Transaction Flow]
