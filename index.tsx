@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
 import Link from "next/link";
 import { NetworkCanvas } from "@/components/NetworkCanvas";
+import { ProductShowcase } from "@/components/ProductShowcase";
 import { DemoSection, FeaturesSection, HowItWorksSection } from "@/components/Sections";
 
 const BETA_MAIL =
@@ -50,6 +51,12 @@ export default function LocalBrainHome() {
               className="transition hover:text-electric-400"
             >
               How it Works
+            </Link>
+            <Link
+              href="#product-showcase"
+              className="transition hover:text-electric-400"
+            >
+              Product
             </Link>
             <Link
               href="#features"
@@ -142,6 +149,7 @@ export default function LocalBrainHome() {
       </section>
 
       <HowItWorksSection />
+      <ProductShowcase />
       <FeaturesSection />
       <DemoSection />
 
