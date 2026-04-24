@@ -43,3 +43,56 @@ body {
 .srs-md strong {
   @apply text-charcoal-50 font-medium;
 }
+
+/* Case showcase — remark-gfm, 표·본문 */
+.showcase-md h1 {
+  @apply text-lg font-semibold text-electric-200/90 first:mt-0 mb-2 mt-4;
+}
+.showcase-md h2 {
+  @apply mb-2 mt-5 border-b border-charcoal-800/90 pb-1.5 text-base font-semibold text-charcoal-100;
+}
+.showcase-md h3 {
+  @apply mb-1.5 mt-4 text-sm font-semibold text-electric-400/85;
+}
+.showcase-md p {
+  @apply mb-2 text-sm font-medium leading-relaxed text-charcoal-300/95;
+}
+.showcase-md strong {
+  @apply font-semibold text-charcoal-100;
+}
+.showcase-md ul {
+  @apply mb-3 list-disc pl-4 text-sm text-charcoal-300/95;
+}
+.showcase-md li {
+  @apply leading-relaxed;
+}
+.showcase-md hr {
+  @apply my-4 border-white/[0.08];
+}
+.showcase-md table {
+  @apply w-full table-fixed border-collapse text-left text-xs;
+}
+.showcase-md th {
+  @apply border border-white/[0.08] bg-charcoal-800/50 px-2 py-1.5 font-semibold text-charcoal-200;
+}
+.showcase-md td {
+  @apply border border-white/[0.06] px-2 py-1.5 text-charcoal-300/90;
+}
+.showcase-md a {
+  @apply text-electric-400/90 underline decoration-electric-500/30 underline-offset-2;
+}
+
+.showcase-scroll::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+.showcase-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.showcase-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.showcase-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

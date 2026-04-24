@@ -2,18 +2,14 @@
 
 import { motion } from "framer-motion";
 import {
-  BarChart3,
   Brain,
-  Code2,
-  FileCode2,
   GitBranch,
   Inbox,
   Lock,
   Pencil,
-  Sparkles,
   Workflow,
 } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+import { CaseShowcase } from "./CaseShowcase";
 
 const fade = {
   initial: { opacity: 0, y: 20 },
@@ -21,23 +17,6 @@ const fade = {
   viewport: { once: true, margin: "-60px" },
   transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
 } as const;
-
-const SRS_SAMPLE = `## 요구사항 정의서 (SRS) — 샘플
-
-### 1. 개요
-\`LocalBrain\`은 **로컬 온프레미스** 환경에서 SAP 컨설턴트의 지식이 파이프라인으로 전이되는 **AI Software Factory**이다.
-
-### 2. 기능 요구사항
-- **FR-01** 요구 수집: 비정형 대화·문서를 구조화된 백로그로 변환한다.
-- **FR-02** 설계: SA 산출물(인터페이스·ERD) 초안을 도출한다.
-- **FR-03** 구현: Dev 표준(ABAP/REST)에 맞는 코드 스케치를 생성한다.
-
-### 3. 비기능
-- **성능** 몇 분 이내에 분석(SRS), 설계(SDS), 수석 컨설턴트 수준의 최적화된 소스코드 응답(온프레미스 로컬 기준).
-- **보안** 외부 전송 **금지** — 모든 데이터는 로컬 볼륨에만 잔존.
-
----
-*본 문서는 LocalBrain 랜딩용 데모 콘텐츠입니다.*`;
 
 const FEATURES = [
   {
@@ -175,52 +154,5 @@ export function FeaturesSection() {
 }
 
 export function DemoSection() {
-  return (
-    <section id="demo" className="relative border-t border-white/[0.06] py-24">
-      <div className="mx-auto max-w-5xl px-6">
-        <motion.div className="mb-12" {...fade}>
-          <p className="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em] text-electric-400/85">
-            Live preview
-          </p>
-          <h2 className="text-3xl font-semibold tracking-[-0.02em] text-charcoal-50 sm:text-4xl">
-            요구사항 정의서(SRS) — 마크다운 미리보기
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm font-medium text-charcoal-400/95">
-            LocalBrain이 생성한 SRS는 마크다운으로 내보내기되며, 아래와 같이
-            읽기 쉬운 구조로 검토할 수 있습니다.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="overflow-hidden rounded-2xl border border-white/[0.08] bg-charcoal-900/40 shadow-2xl shadow-black/50 ring-1 ring-white/[0.04]"
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <div className="flex items-center justify-between border-b border-white/[0.06] bg-charcoal-900/80 px-4 py-2.5">
-            <div className="flex items-center gap-2">
-              <FileCode2 className="h-4 w-4 text-electric-400/90" />
-              <span className="font-mono text-xs text-charcoal-400">
-                requirement-spec.md
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Code2 className="h-3.5 w-3.5 text-charcoal-500" />
-              <BarChart3 className="h-3.5 w-3.5 text-charcoal-500" />
-            </div>
-          </div>
-          <div className="srs-md max-h-[min(60vh,28rem)] overflow-auto px-5 py-6 font-sans">
-            <ReactMarkdown>{SRS_SAMPLE}</ReactMarkdown>
-          </div>
-          <div className="flex items-center justify-end gap-2 border-t border-white/[0.05] bg-charcoal-950/50 px-4 py-2">
-            <Sparkles className="h-3.5 w-3.5 text-electric-500/70" />
-            <span className="text-[10px] font-mono text-charcoal-500">
-              LocalBrain export · MD
-            </span>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
+  return <CaseShowcase />;
 }
