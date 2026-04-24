@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0c0e;
+  --foreground: #e4e6ea;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Demo markdown preview — prose in dark terminal style */
+.srs-md h1 {
+  @apply text-lg font-semibold text-electric-300 mt-0 mb-3;
+}
+.srs-md h2 {
+  @apply text-base font-semibold text-charcoal-100 mt-6 mb-2 border-b border-charcoal-700/80 pb-1;
+}
+.srs-md h3 {
+  @apply text-sm font-medium text-electric-400/90 mt-4 mb-2;
+}
+.srs-md p {
+  @apply text-sm text-charcoal-200/90 leading-relaxed mb-2;
+}
+.srs-md ul {
+  @apply list-disc pl-4 mb-3 space-y-1 text-sm text-charcoal-300;
+}
+.srs-md li {
+  @apply leading-relaxed;
+}
+.srs-md code {
+  @apply font-mono text-xs text-electric-300/95 bg-charcoal-800/80 px-1.5 py-0.5 rounded;
+}
+.srs-md strong {
+  @apply text-charcoal-50 font-medium;
+}
