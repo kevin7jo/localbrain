@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import {
   Brain,
-  Code2,
   Cpu,
   Mail,
   Send,
@@ -109,6 +108,40 @@ function PlaceholderEnterprise() {
   );
 }
 
+function PlaceholderOmniParse() {
+  return (
+    <div
+      className="lb-omni-stage relative mx-auto flex h-[10.5rem] w-full max-w-lg items-center justify-center sm:h-40"
+      aria-hidden
+    >
+      <div className="pointer-events-none absolute inset-0 rounded-xl bg-[radial-gradient(ellipse_65%_80%_at_50%_50%,rgba(10,132,255,0.14),transparent_72%)]" />
+      <div className="pointer-events-none absolute inset-0 rounded-xl bg-[conic-gradient(from_200deg_at_50%_50%,transparent_0deg,rgba(10,132,255,0.06)_120deg,transparent_240deg)] opacity-80" />
+
+      <div className="absolute left-4 top-5 sm:left-6 sm:top-6">
+        <span className="lb-omni-chip lb-omni-chip-pdf lb-omni-in-pdf">PDF</span>
+      </div>
+      <div className="absolute right-4 top-5 sm:right-6 sm:top-6">
+        <span className="lb-omni-chip lb-omni-chip-xls lb-omni-in-xls">XLS</span>
+      </div>
+      <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-8">
+        <span className="lb-omni-chip lb-omni-chip-doc lb-omni-in-doc">DOC</span>
+      </div>
+      <div className="absolute bottom-5 right-5 sm:bottom-6 sm:right-8">
+        <span className="lb-omni-chip lb-omni-chip-xml lb-omni-in-xml">XML</span>
+      </div>
+
+      <div className="relative z-[1] flex flex-col items-center gap-1">
+        <div className="lb-omni-engine-core flex h-[3.35rem] w-[3.35rem] items-center justify-center rounded-2xl border border-electric-500/40 bg-gradient-to-br from-charcoal-800/95 to-charcoal-950 text-electric-300">
+          <Server className="h-7 w-7" strokeWidth={1.35} />
+        </div>
+        <span className="font-mono text-[9px] font-semibold uppercase tracking-[0.16em] text-electric-500/55">
+          Parse Router
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function PlaceholderSenior() {
   return (
     <div className="flex w-full max-w-md flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
@@ -195,6 +228,35 @@ export function ProductShowcase() {
             <ImageOrPlaceholder src="/images/showcase3.png" alt="아키텍처와 지능형 엔진">
               <PlaceholderSenior />
             </ImageOrPlaceholder>
+          </motion.article>
+
+          <motion.article className={`${cardClass} lg:col-span-3`} {...trans(0.2)}>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
+              <div className="min-w-0 flex-1">
+                <p className="mb-2 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-electric-400/75">
+                  Omni-Format Parsing
+                </p>
+                <h3 className="text-lg font-semibold tracking-[-0.02em] text-charcoal-50 sm:text-xl">
+                  Omni-Format Parsing Engine (5대 엔터프라이즈 포맷 지원)
+                </h3>
+                <p className="mt-2 text-sm font-semibold leading-snug text-electric-300/90">
+                  어떤 형태의 산출물이든, AI가 즉시 해독합니다.
+                </p>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-charcoal-400/95">
+                  PDF(인터페이스 설계서), Excel(테이블/데이터 딕셔너리), Word/RTF(업무 매뉴얼), XML(BAPI
+                  페이로드) 등 SI 현장에서 쓰이는 모든 문서를 로컬브레인의 전용 라우터가 실시간으로 추출하고
+                  최적화(CSV 경량화 등)하여 초거대 지능 모델의 뇌 속으로 직접 주입합니다.
+                </p>
+              </div>
+              <div className="shrink-0 lg:w-[min(100%,22rem)]">
+                <div className="rounded-xl border border-white/[0.06] bg-charcoal-950/60 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                  <PlaceholderOmniParse />
+                </div>
+                <p className="mt-2 text-center font-mono text-[9px] font-medium text-charcoal-500">
+                  호버 시 흡입·엔진 펄스 가속
+                </p>
+              </div>
+            </div>
           </motion.article>
         </div>
       </div>
